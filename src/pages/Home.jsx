@@ -1,5 +1,4 @@
 import React from "react";
-import TeamInfo from "../components/information/TeamInfo";
 
 const Home = () => {
   return (

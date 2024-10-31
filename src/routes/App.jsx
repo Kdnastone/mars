@@ -8,6 +8,7 @@ import About from "../pages/About";
 import MarsPhotos from "../pages/MarsPhotos";
 import AddPlanet from "../pages/AddPlanet";
 import PlanetsList from "../storage/PlanetsList";
+import NasaEyes from "../pages/NasaEyes";
 
 const App = () => {
   const handleAddPlanet = (planet) => {
@@ -24,17 +25,16 @@ const App = () => {
         <Link to="/mars">Fotos de Marte</Link>
         <Link to="/add-planet">Añadir Planeta</Link>
         <Link to="/planets">Planetas</Link>
+        <Link to="/nasa-eyes">Sistema Solar</Link>
       </nav>
 
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/mars" element={<MarsPhotos />} />
-        <Route
-          path="/add-planet"
-          element={<AddPlanet onAddPlanet={handleAddPlanet} />}
-        />
+        <Route path="/add-planet" element={<AddPlanet onAddPlanet={handleAddPlanet} />}/>
         <Route path="/planets" element={<PlanetsList />} />
+        <Route path="/nasa-eyes" element={<NasaEyes />} />
 
         {/* Redirigir a /home por defecto */}
         <Route path="/" element={<Navigate to="/home" replace />} />

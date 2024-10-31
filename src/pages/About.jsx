@@ -52,15 +52,21 @@ const About = () => {
           Nuestra iniciativa se basará en la calidad del contenido, la innovación continua y el compromiso con nuestra comunidad para asegurar un crecimiento sostenible.
         </p>
       </section>
+      {/* Cards de los miembros del equipo */}
       <div className="team-cards">
           {TeamInfo.map((miembro, index) => (
             <div className="card" key={index}>
               <img src={miembro.image} alt={miembro.nombre} />
               <h2>{miembro.nombre}</h2>
               <p>
+                {/* href: Enlace para abrir GitHub según miembro */}
+                {/* target: Abre el enlace en una nueva pestaña */}
+                {/* noopener: Evita que la nueva página tenga acceso al objeto window.opener. */}
+                {/* noreferrer: Evita que la nueva página reciba info. de la URL de origen. */}
                 <a href={miembro.github} target="_blank" rel="noopener noreferrer">GitHub</a>
               </p>
               <p>
+                {/* href: Enlace para abrir LinkedIn según miembro */}
                 <a href={miembro.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </p>
             </div>
